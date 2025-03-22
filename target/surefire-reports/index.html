@@ -5,8 +5,9 @@
   <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
-    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -20,9 +21,9 @@
      -->
   </head>
 
-  <body>
-    <div class="top-banner-root">
+  <body>    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
       <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
@@ -49,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>D:\eclipse 2\Capstone_Project1\xml\LoginTest.xml</span>
+                    <span>D:\eclipse 2\Capstone_Project1\xml\SignUpCucumber.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -59,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>0 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +103,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestCase.LoginTest" class="method navigator-link" hash-for-method="Login">Login</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="myRunner.SignUpTestNGRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Successful Sign-Up with Valid Credentials&quot;, &quot;User Sign-Up Functionality&quot;)">runScenario("Successful Sign-Up with Valid Credentials", "User Sign-Up Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="myRunner.SignUpTestNGRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Unsuccessful Sign-Up with Invalid Credentials&quot;, &quot;User Sign-Up Functionality&quot;)">runScenario("Unsuccessful Sign-Up with Invalid Credentials", "User Sign-Up Functionality")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -120,14 +126,27 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">TestCase.LoginTest</span>
+              <span class="class-name">myRunner.SignUpTestNGRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Login">
-                  </a> <!-- Login -->
-                  <span class="method-name">Login</span>
+                  <a name="runScenario(&quot;Successful Sign-Up with Valid Credentials&quot;, &quot;User Sign-Up Functionality&quot;)">
+                  </a> <!-- runScenario("Successful Sign-Up with Valid Credentials", "User Sign-Up Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Successful Sign-Up with Valid Credentials","User Sign-Up Functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Unsuccessful Sign-Up with Invalid Credentials&quot;, &quot;User Sign-Up Functionality&quot;)">
+                  </a> <!-- runScenario("Unsuccessful Sign-Up with Invalid Credentials", "User Sign-Up Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Unsuccessful Sign-Up with Invalid Credentials","User Sign-Up Functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,7 +154,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\eclipse 2\Capstone_Project1\xml\LoginTest.xml</span>
+            <span class="header-content">D:\eclipse 2\Capstone_Project1\xml\SignUpCucumber.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -143,9 +162,8 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;TestCase.LoginTest&quot;/&gt;
+      &lt;class name=&quot;myRunner.SignUpTestNGRunner&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -169,6 +187,14 @@
             <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">cucumber</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">runScenario</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Suite" class="panel">
@@ -185,16 +211,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Login')
-data.setCell(0, 2, 'TestCase.LoginTest')
-data.setCell(0, 3, 5820);
+data.setCell(0, 1, 'runScenario')
+data.setCell(0, 2, 'myRunner.SignUpTestNGRunner')
+data.setCell(0, 3, 7029);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'myRunner.SignUpTestNGRunner')
+data.setCell(1, 3, 5017);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <span class="suite-total-time">Total running time: 12 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -220,26 +250,27 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">TestCase.LoginTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">readData</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
+              <div class="chronological-class-name">myRunner.SignUpTestNGRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">248 ms</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@7bcecef6)</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">Login</span>
-                <span class="method-start">1911 ms</span>
+                <span class="method-name">runScenario("Successful Sign-Up with Valid Credentials", "User Sign-Up Functionality")</span>
+                <span class="method-start">494 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Unsuccessful Sign-Up with Invalid Credentials", "User Sign-Up Functionality")</span>
+                <span class="method-start">7527 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">7736 ms</span>
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">12547 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
     </div> <!-- wrapper -->
   </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
 </html>
